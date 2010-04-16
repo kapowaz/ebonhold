@@ -34,9 +34,10 @@
 						</div>
 						{/block:NewDayDate}
 
-						{block:Title}<h3><a href="{Permalink}">{Title}</a></h3>{/block:Title}
+						{block:Title}<h2><a href="{Permalink}">{Title}</a></h2>{/block:Title}
 
 						{Body}
+						<hr>
 					</div>
 					{/block:Regular}
 
@@ -52,6 +53,7 @@
 
 						{LinkOpenTag}<img src="{PhotoURL-760}" alt="{PhotoAlt}"/>{LinkCloseTag}<br/>
 						{block:Caption}<div class="caption">{Caption}</div>{/block:Caption}
+						<hr>
 					</div>
 					{/block:Photo}
 
@@ -70,6 +72,7 @@
 							<p>{Quote}</p>
 						</blockquote>
 						{block:Source}<cite>&mdash; {Source}</cite>{/block:Source}
+						<hr>
 					</div>
 					{/block:Quote}
 
@@ -85,6 +88,7 @@
 
 						<a href="{URL}" {Target}>{Name}</a>
 						{block:Description}<p>{Description}</p>{/block:Description}
+						<hr>
 					</div>
 					{/block:Link}
 
@@ -98,13 +102,14 @@
 						</div>
 						{/block:NewDayDate}
 
-						{block:Title}<h3><a href="{Permalink}">{Title}</a></h3>{/block:Title}
+						{block:Title}<h2><a href="{Permalink}">{Title}</a></h2>{/block:Title}
 
 						<ul>
 							{block:Lines}
 							<li class="{Alt}">{block:Label}<span class="label">{Label}</span>{/block:Label} {Line}</li>
 							{/block:Lines}
 						</ul>
+						<hr>
 					</div>
 					{/block:Conversation}
 
@@ -118,8 +123,9 @@
 						</div>
 						{/block:NewDayDate}
 
-						{block:Caption}<h3><a href="{Permalink}">{Caption}</a></h3>{/block:Caption}
-						{AudioPlayerWhite}
+						{block:Caption}<h2><a href="{Permalink}">{Caption}</a></h2>{/block:Caption}
+						{AudioPlayerBlack}
+						<hr>
 					</div>
 					{/block:Audio}
 
@@ -135,6 +141,7 @@
 
 						{Video-760}
 						{block:Caption}<div class="caption">{Caption}</div>{/block:Caption}
+						<hr>
 					</div>
 					{/block:Video}
 
@@ -151,7 +158,7 @@
 		{block:PreviousPage}<a href="{PreviousPage}" class="next">Newer entries &rarr;</a>{/block:PreviousPage}
 	</div>
 	
-	<script type="text/javascript" charset="utf-8" src="assets/js/jquery-1.4.2.min.js"></script>
+	<script type="text/javascript" charset="utf-8" src="http://ebonhold.kapowaz.net/assets/js/jquery-1.4.2.min.js"></script>
 	<script type="text/javascript" charset="utf-8">
 		$(document).ready(function() {
 			$('div.main').css({height: Math.round($('div#content').height()) - 709});

@@ -150,7 +150,8 @@ body div#wrapper div.main div#content div.photo a
 	border:0;
 }
 body div#wrapper div.main div#content div.photo div.caption,
-body div#wrapper div.main div#content div.video div.caption
+body div#wrapper div.main div#content div.video div.caption,
+body div#wrapper div.main div#content div.audio div.caption
 {
 	font-style:italic;
 	text-align:right;
@@ -164,6 +165,10 @@ body div#wrapper div.main div#content div.quote blockquote
 	-moz-border-radius:5px;
 	padding:10px;
 }
+body div#wrapper div.main div#content div.quote blockquote p:last-child
+{
+	margin-bottom:0;
+}
 
 body div#footer
 {
@@ -173,3 +178,16 @@ body div#footer
 }
 body div#footer a.previous { float:left; }
 body div#footer a.newer { float:right; }
+
+table.badges
+{
+	width:100%;
+	border-collapse:collapse;
+	margin:20px 0;
+}
+table.badges thead tr th { text-align:left; text-transform:uppercase; border-bottom:1px solid rgb(64,0,0); padding:2px; }
+table.badges thead tr th:last-child { text-align:right; }
+table.badges tbody tr th { text-align:left; padding:2px; }
+table.badges tbody tr td:last-child { text-align:right; padding:2px; }
+table.badges tfoot tr th { text-align:left; border-top:1px solid rgb(64,0,0); padding:2px; }
+table.badges tfoot tr th:last-child { text-align:right; }

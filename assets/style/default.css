@@ -39,6 +39,13 @@ body div#header h1
 	text-indent:-999px;
 	margin:0 auto;
 }
+body div#header h1 a
+{
+	border:0;
+	display:block;
+	height:155px;
+	width:960px;
+}
 body div#header p
 {
 	margin:0 auto;

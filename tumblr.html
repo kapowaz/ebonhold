@@ -3,154 +3,163 @@
 <html lang="en">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<title>{block:PostTitle}{PostTitle} {/block:PostTitle}{block:PostTitle}[ {/block:PostTitle}kapowaz: {Title}{block:PostTitle} ]{/block:PostTitle}</title>
-	<link rel="shortcut icon" href="http://www.kapowaz.net/assets/images/bookmark.png" type="image/png">
-	<link rel="stylesheet" href="http://www.kapowaz.net/assets/style/default.css" type="text/css" charset="utf-8">
-	<link rel="stylesheet" href="http://www.kapowaz.net/assets/style/iphone.css" type="text/css" charset="utf-8" media="only screen and (max-device-width: 480px)">
-	<link rel="alternate" type="application/rss+xml" title="kapowaz stumblelog feed" href="/rss/">
-	<meta name="viewport" content="width=600; user-scalable=no">
+	<title>{block:PostTitle}{PostTitle} {/block:PostTitle}{block:PostTitle}{ {/block:PostTitle}Ebon Hold: {Title}{block:PostTitle} }{/block:PostTitle}</title>
+	<link rel="shortcut icon" href="http://ebonhold.kapowaz.net/assets/images/bookmark.png" type="image/png">
+	<link rel="stylesheet" href="http://ebonhold.kapowaz.net/assets/style/default.css" type="text/css">
+	<link rel="alternate" type="application/rss+xml" title="Ebon Hold RSS Feed" href="/rss/">
 </head>
 
-<body class="stumblelog">
+<body>
 	<div id="header">
-		<h1 id="logo"><a href="http://www.kapowaz.net/" title="Home">K</a></h1>
-		<div id="logotype">kapowaz</div>
-		
-		<ul id="navigation">
-			<li class="selected"><a href="/">stumblelog</a></li>
-			<li><a href="http://www.kapowaz.net/portfolio.html">portfolio</a></li>
-			<li><a href="http://www.kapowaz.net/">colophon</a></li>
-		</ul>
+			<h1>{Title}</h1>
+			<p>Notes from a Death Knight in Azeroth</p>
 	</div>
 	
-	<div id="content" class="stumblelog">
-		<h2>{Title}</h2>
-		
-		{block:Posts}
-		
-			{block:Regular}
-			<div class="post text">
+	<div id="wrapper">
+		<div class="top"></div>
+		<div class="main">
 			
-				{block:NewDayDate}
-				<div class="date">
-					<span class="month">{ShortMonth}</span>
-					<span class="day">{DayOfMonthWithZero}</span>
-					<span class="year">{Year}</span>
-				</div>
-				{/block:NewDayDate}
+			<div id="content">
 			
-				{block:Title}<h3><a href="{Permalink}">{Title}</a></h3>{/block:Title}
+				{block:Posts}
+
+					{block:Regular}
+					<div class="post text">
+
+						{block:NewDayDate}
+						<div class="date">
+							<span class="month">{ShortMonth}</span>
+							<span class="day">{DayOfMonthWithZero}</span>
+							<span class="year">{Year}</span>
+						</div>
+						{/block:NewDayDate}
+
+						{block:Title}<h3><a href="{Permalink}">{Title}</a></h3>{/block:Title}
+
+						{Body}
+					</div>
+					{/block:Regular}
+
+					{block:Photo}
+					<div class="post photo">
+						{block:NewDayDate}
+						<div class="date">
+							<span class="month">{ShortMonth}</span>
+							<span class="day">{DayOfMonthWithZero}</span>
+							<span class="year">{Year}</span>
+						</div>
+						{/block:NewDayDate}
+
+						{LinkOpenTag}<img src="{PhotoURL-760}" alt="{PhotoAlt}"/>{LinkCloseTag}<br/>
+						{block:Caption}<div class="caption">{Caption}</div>{/block:Caption}
+					</div>
+					{/block:Photo}
+
+					{block:Quote}
+
+					<div class="post quote">
+						{block:NewDayDate}
+						<div class="date">
+							<span class="month">{ShortMonth}</span>
+							<span class="day">{DayOfMonthWithZero}</span>
+							<span class="year">{Year}</span>
+						</div>
+						{/block:NewDayDate}
+
+						<blockquote>
+							<p>{Quote}</p>
+						</blockquote>
+						{block:Source}<cite>&mdash; {Source}</cite>{/block:Source}
+					</div>
+					{/block:Quote}
+
+					{block:Link}
+					<div class="post link">
+						{block:NewDayDate}
+						<div class="date">
+							<span class="month">{ShortMonth}</span>
+							<span class="day">{DayOfMonthWithZero}</span>
+							<span class="year">{Year}</span>
+						</div>
+						{/block:NewDayDate}
+
+						<a href="{URL}" {Target}>{Name}</a>
+						{block:Description}<p>{Description}</p>{/block:Description}
+					</div>
+					{/block:Link}
+
+					{block:Conversation}
+					<div class="post chat">
+						{block:NewDayDate}
+						<div class="date">
+							<span class="month">{ShortMonth}</span>
+							<span class="day">{DayOfMonthWithZero}</span>
+							<span class="year">{Year}</span>
+						</div>
+						{/block:NewDayDate}
+
+						{block:Title}<h3><a href="{Permalink}">{Title}</a></h3>{/block:Title}
+
+						<ul>
+							{block:Lines}
+							<li class="{Alt}">{block:Label}<span class="label">{Label}</span>{/block:Label} {Line}</li>
+							{/block:Lines}
+						</ul>
+					</div>
+					{/block:Conversation}
+
+					{block:Audio}
+					<div class="post audio">
+						{block:NewDayDate}
+						<div class="date">
+							<span class="month">{ShortMonth}</span>
+							<span class="day">{DayOfMonthWithZero}</span>
+							<span class="year">{Year}</span>
+						</div>
+						{/block:NewDayDate}
+
+						{block:Caption}<h3><a href="{Permalink}">{Caption}</a></h3>{/block:Caption}
+						{AudioPlayerWhite}
+					</div>
+					{/block:Audio}
+
+					{block:Video}			
+					<div class="post video">
+						{block:NewDayDate}
+						<div class="date">
+							<span class="month">{ShortMonth}</span>
+							<span class="day">{DayOfMonthWithZero}</span>
+							<span class="year">{Year}</span>
+						</div>
+						{/block:NewDayDate}
+
+						{Video-760}
+						{block:Caption}<div class="caption">{Caption}</div>{/block:Caption}
+					</div>
+					{/block:Video}
+
+				{/block:Posts}
+				
+			</div> <!-- /div#content -->
 			
-				{Body}
-			</div>
-			{/block:Regular}
-		
-			{block:Photo}
-			<div class="post photo">
-				{block:NewDayDate}
-				<div class="date">
-					<span class="month">{ShortMonth}</span>
-					<span class="day">{DayOfMonthWithZero}</span>
-					<span class="year">{Year}</span>
-				</div>
-				{/block:NewDayDate}
-				
-				{LinkOpenTag}<img src="{PhotoURL-500}" alt="{PhotoAlt}"/>{LinkCloseTag}<br/>
-				{block:Caption}<div class="caption">{Caption}</div>{/block:Caption}
-			</div>
-			{/block:Photo}
-		
-			{block:Quote}
-			
-			<div class="post quote">
-				{block:NewDayDate}
-				<div class="date">
-					<span class="month">{ShortMonth}</span>
-					<span class="day">{DayOfMonthWithZero}</span>
-					<span class="year">{Year}</span>
-				</div>
-				{/block:NewDayDate}
-				
-				<blockquote>
-					<p>{Quote}</p>
-				</blockquote>
-				{block:Source}<cite>&mdash; {Source}</cite>{/block:Source}
-			</div>
-			{/block:Quote}
-			
-			{block:Link}
-			<div class="post link">
-				{block:NewDayDate}
-				<div class="date">
-					<span class="month">{ShortMonth}</span>
-					<span class="day">{DayOfMonthWithZero}</span>
-					<span class="year">{Year}</span>
-				</div>
-				{/block:NewDayDate}
-				
-				<a href="{URL}" {Target}>{Name}</a>
-				{block:Description}<p>{Description}</p>{/block:Description}
-			</div>
-			{/block:Link}
-		
-			{block:Conversation}
-			<div class="post chat">
-				{block:NewDayDate}
-				<div class="date">
-					<span class="month">{ShortMonth}</span>
-					<span class="day">{DayOfMonthWithZero}</span>
-					<span class="year">{Year}</span>
-				</div>
-				{/block:NewDayDate}
-				
-				{block:Title}<h3><a href="{Permalink}">{Title}</a></h3>{/block:Title}
-				
-				<ul>
-					{block:Lines}
-					<li class="{Alt}">{block:Label}<span class="label">{Label}</span>{/block:Label} {Line}</li>
-					{/block:Lines}
-				</ul>
-			</div>
-			{/block:Conversation}
-		
-			{block:Audio}
-			<div class="post audio">
-				{block:NewDayDate}
-				<div class="date">
-					<span class="month">{ShortMonth}</span>
-					<span class="day">{DayOfMonthWithZero}</span>
-					<span class="year">{Year}</span>
-				</div>
-				{/block:NewDayDate}
-				
-				{block:Caption}<h3><a href="{Permalink}">{Caption}</a></h3>{/block:Caption}
-				{AudioPlayerWhite}
-			</div>
-			{/block:Audio}
-		
-			{block:Video}			
-			<div class="post video">
-				{block:NewDayDate}
-				<div class="date">
-					<span class="month">{ShortMonth}</span>
-					<span class="day">{DayOfMonthWithZero}</span>
-					<span class="year">{Year}</span>
-				</div>
-				{/block:NewDayDate}
-				
-				{Video-500}
-				{block:Caption}<div class="caption">{Caption}</div>{/block:Caption}
-			</div>
-			{/block:Video}
-		
-		{/block:Posts}
-		
-		<div class="footer">
-			{block:NextPage}<a href="{NextPage}" class="previous">&larr; Previous entries</a>{/block:NextPage}
-			{block:PreviousPage}<a href="{PreviousPage}" class="next">Newer entries &rarr;</a>{/block:PreviousPage}
-		</div>
-		
+		</div> <!-- /div.main -->
+		<div class="bottom"></div>
+	</div> <!-- /div#wrapper -->
+	
+	<div id="footer">
+		{block:NextPage}<a href="{NextPage}" class="previous">&larr; Previous entries</a>{/block:NextPage}
+		{block:PreviousPage}<a href="{PreviousPage}" class="next">Newer entries &rarr;</a>{/block:PreviousPage}
 	</div>
+	
+	<script type="text/javascript" charset="utf-8" src="assets/js/jquery-1.4.2.min.js"></script>
+	<script type="text/javascript" charset="utf-8">
+		$(document).ready(function() {
+			$('div.main').css({height: Math.round($('div#content').height()) - 709});
+			setTimeout(function(){
+				$('div.main').css({height: Math.round($('div#content').height()) - 709});				
+			},200);
+		});
+	</script>
 	<script type="text/javascript" src="http://www.google-analytics.com/urchin.js"></script>
 	<script type="text/javascript">
 	_uacct = "UA-338044-3";

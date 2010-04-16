@@ -1,0 +1,175 @@
+body 
+{ 
+	background-image:url(../images/body-bg.jpg);
+	background-position:center 0;
+	margin:0;
+	min-width:960px;
+	font-family:Georgia, serif;
+	color:white;
+	text-shadow:1px 1px 0 black;
+	font-size:14px;
+}
+body a
+{
+	color:white;
+	text-decoration:none;
+}
+body a:hover
+{
+	border-bottom:2px solid rgba(255,255,255,0.5);
+}
+body a img
+{
+	border:0;
+}
+body div#header
+{
+	background-image:url(../images/header-bg.jpg);
+	background-repeat:repeat-x;
+	background-position:center 0;
+	height:372px;
+}
+body div#header h1
+{
+	background-image:url(../images/title-logo.jpg);
+	background-repeat:repeat-x;
+	width:960px;
+	height:155px;
+	overflow:hidden;
+	text-indent:-999px;
+	margin:0 auto;
+}
+body div#header p
+{
+	margin:0 auto;
+	text-align:right;
+	text-transform:uppercase;
+	width:740px;
+}	
+body div#wrapper
+{
+	width:814px;
+	padding:0;
+	margin:-192px auto 10px auto;
+}
+body div#wrapper div.top
+{
+	background-image:url(../images/content-top.png);
+	background-repeat:no-repeat;
+	height:379px;
+}
+body div#wrapper div.main
+{
+	background-image:url(../images/content-bg.png);
+	background-repeat:repeat-y;
+	background-position:0 0;
+	padding:0 27px;
+}
+body div#wrapper div.bottom
+{
+	background-image:url(../images/content-bottom.png);
+	background-repeat:no-repeat;
+	background-position:0 bottom;
+	height:372px;
+}
+
+body div#wrapper div.main div#content
+{
+	margin:0;
+	position:absolute;
+	margin-top:-350px;
+	width:760px;
+	color:rgb(64,0,0);
+	text-shadow:rgba(64,0,0,0.2) 0 1px 0;
+}
+body div#wrapper div.main div#content h2
+{
+	text-transform:uppercase;
+	text-align:center;
+	margin:15px 0 30px 0;
+	padding:0 50px;
+	font-size:18px;
+	background-image:url(../images/h2-ornaments.png);
+	background-repeat:no-repeat;
+	background-position:center center;
+}
+body div#wrapper div.main div#content p
+{
+	margin:0 0 1em 0;
+	font-size:14px;
+	line-height:1.5em;
+}
+body div#wrapper div.main div#content a { color:rgb(128,0,0); }
+body div#wrapper div.main div#content a:hover { border-bottom:2px solid rgba(128,0,0,0.5); }
+body div#wrapper div.main div#content hr
+{
+	margin:30px 0;
+	background-image:url(../images/hr-ornament.png);
+	background-repeat:no-repeat;
+	background-position:center center;
+	height:23px;
+	border:0;
+}
+body div#wrapper div.main div#content p + h2
+{
+	margin-top:50px;
+}
+body div#wrapper div.main div#content img
+{
+	border:2px solid rgba(32,0,0,0.1);
+}
+
+body div#wrapper div.main div#content div.post div.date
+{
+	text-transform:uppercase;
+	text-align:right;
+	margin:0 10px 10px 0;
+}
+
+body div#wrapper div.main div#content div.chat ul
+{
+	list-style:none;
+	padding:0 20px;
+	margin:10px 0;
+}
+body div#wrapper div.main div#content div.chat ul li
+{
+	padding:5px;
+	background-color:rgba(32,0,0,0.1);
+}
+body div#wrapper div.main div#content div.chat ul li span.label
+{
+	font-weight:bold;
+}
+body div#wrapper div.main div#content div.chat ul li.odd
+{
+	background-color:rgba(32,0,0,0.2);
+}
+body div#wrapper div.main div#content div.photo a
+{
+	border:0;
+}
+body div#wrapper div.main div#content div.photo div.caption,
+body div#wrapper div.main div#content div.video div.caption
+{
+	font-style:italic;
+	text-align:right;
+	margin-top:10px;
+}
+body div#wrapper div.main div#content div.quote blockquote
+{
+	margin:10px 20px;
+	background-color:rgba(32,0,0,0.1);
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	padding:10px;
+}
+
+body div#footer
+{
+	width:800px;
+	margin:0 auto 50px;
+	text-transform:uppercase;
+}
+body div#footer a.previous { float:left; }
+body div#footer a.newer { float:right; }

@@ -120,9 +120,9 @@
 	<script type="text/javascript" charset="utf-8">
 		$(document).ready(function() {
 			$('div.main').css({height: Math.round($('div#content').height()) - 709});
-			setTimeout(function(){
-				$('div.main').css({height: Math.round($('div#content').height()) - 709});				
-			},200);
+		  $(window).load(function(){
+		    $('div.main').css({height: Math.round($('div#content').height()) - 709});
+		  });
 		});
 	</script>
 </body>

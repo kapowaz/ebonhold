@@ -51,7 +51,7 @@
 						</div>
 						{/block:NewDayDate}
 
-						{LinkOpenTag}<img src="{PhotoURL-760}" alt="{PhotoAlt}"/>{LinkCloseTag}<br/>
+						{LinkOpenTag}<img src="{PhotoURL-HighRes}" alt="{PhotoAlt}" width="760"/>{LinkCloseTag}<br/>
 						{block:Caption}<div class="caption">{Caption}</div>{/block:Caption}
 						<hr>
 					</div>
@@ -162,9 +162,9 @@
 	<script type="text/javascript" charset="utf-8">
 		$(document).ready(function() {
 			$('div.main').css({height: Math.round($('div#content').height()) - 709});
-			setTimeout(function(){
-				$('div.main').css({height: Math.round($('div#content').height()) - 709});				
-			},200);
+		  $(window).load(function(){
+		    $('div.main').css({height: Math.round($('div#content').height()) - 709});
+		  });
 		});
 	</script>
 	<script type="text/javascript" src="http://www.google-analytics.com/urchin.js"></script>
